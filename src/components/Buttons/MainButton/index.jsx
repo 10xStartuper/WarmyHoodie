@@ -15,6 +15,7 @@ const Container = styled.div`
   padding: 14px 20px;
   border-radius: 12px;
   cursor: pointer;
+  max-height: 48px;
   &:hover {
     transition: all 0.2s ease-in-out;
     background: ${colors.main};

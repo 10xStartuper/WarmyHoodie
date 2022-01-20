@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { colors } from "../../configs/";
 import { logo } from "../../assets/";
-import { MainButton, SecondaryButton } from "../Buttons/";
+import { MainButton, SecondaryButton, IconButton } from "../Buttons/";
+import { ShoppingBag } from "react-feather";
 
 const Container = styled.div`
   padding: 26px 64px;
@@ -12,12 +13,12 @@ const Container = styled.div`
   justify-content: space-between;
 `;
 const Logo = styled.img`
-  max-height: 42px;
+  max-height: 40px;
 `;
 const ButtonContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 330px;
+  min-width: 388px;
 `;
 
 const Navbar = () => {
@@ -25,6 +26,9 @@ const Navbar = () => {
     <Container>
       <Logo src={logo} />
       <ButtonContainer>
+        <IconButton>
+          <ShoppingBag size={24} color={colors.black} />
+        </IconButton>
         <SecondaryButton>Войти</SecondaryButton>
         <MainButton>заказываете сейчас</MainButton>
       </ButtonContainer>
